@@ -72,6 +72,12 @@
       align-items: center;
     }
 
+    /* moves the panels off screen initially; when a class of open-active is applied sets them back originally*/
+    .panel > *:first-child { transform: translateY(-100%); }
+    .panel.open-active > *:first-child { transform: translateY(0); }
+    .panel > *:last-child { transform: translateY(100%); }
+    .panel.open-active > *:last-child {transform: translateY(0); }
+
     .panel p {
       text-transform: uppercase;
       font-family: 'Amatic SC', cursive;
